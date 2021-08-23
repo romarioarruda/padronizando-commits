@@ -25,11 +25,11 @@ $ npm install husky -D
 Edit package.json:
 
 "scripts": {
-    "prepare": "husky install",
-    "husky": {
-        "hooks": {
-            "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
-        }
+    "prepare": "husky install"
+},
+"husky": {
+    "hooks": {
+        "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
     }
 }
 ```
