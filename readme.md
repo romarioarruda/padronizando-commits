@@ -3,7 +3,7 @@
 > Passo 1
 
 ```
-$ npm init -y
+$ npm i
 ```
 
 > Passo 2
