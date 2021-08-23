@@ -18,7 +18,9 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "hooks": {
-    "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
+    }
   }
 }

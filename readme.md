@@ -6,7 +6,10 @@ $ npm install husky -D
 
 Edit package.json > prepare script:
 "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "hooks": {
+        "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
+    }
 }
 
 $ npm run prepare
