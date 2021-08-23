@@ -50,5 +50,5 @@ $ git commit
 
 
 **Links de referências**:
-`https://github.com/commitizen/cz-cli`
-`https://typicode.github.io/husky/#/`
+https://github.com/commitizen/cz-cli
+https://typicode.github.io/husky/#/
