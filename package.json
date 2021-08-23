@@ -1,0 +1,24 @@
+{
+  "name": "padronizando-commits",
+  "version": "1.0.0",
+  "description": "Configurando um padronizador de commits com Husky e Commitzen",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "hooks": {
+    "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
+  }
+}
