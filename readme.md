@@ -17,7 +17,11 @@ $ commitizen init cz-conventional-changelog --save-dev --save-exact
 > Passo 3
 ```
 $ npm install husky -D
+```
 
+> Passo 4
+
+```
 Edit package.json:
 
 "scripts": {
@@ -28,19 +32,23 @@ Edit package.json:
         }
     }
 }
+```
 
+> Passo 5
+
+```
 $ npm run prepare
 ```
 
-> Passo 4
+> Passo 6
 
 ```
-Add um hook:
+Adicione o hook:
 
 $ npx husky add .husky/prepare-commit-msg "exec < /dev/tty && node_modules/.bin/cz --hook || true"
 ```
 
-> Passo 5
+> Passo 7
 
 Na hora de fazer o commit execute apenas:
 
