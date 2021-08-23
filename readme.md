@@ -1,14 +1,31 @@
 #### Passos para configurar o padronizador de commits
 
 > Passo 1
+
+```
+$ npm init -y
+```
+
+> Passo 2
+
+```
+$ npm install -g commitizen
+
+$ commitizen init cz-conventional-changelog --save-dev --save-exact
+```
+
+> Passo 3
 ```
 $ npm install husky -D
 
-Edit package.json > prepare script:
+Edit package.json:
+
 "scripts": {
     "prepare": "husky install",
-    "hooks": {
-        "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
+    "husky": {
+        "hooks": {
+            "prepare-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
+        }
     }
 }
 
@@ -20,10 +37,10 @@ npx husky add .husky/prepare-commit-msg "exec < /dev/tty && node_modules/.bin/cz
 
 ```
 
-> Passo 2
+> Passo 4
+
+Na hora de fazer o commit execute apenas:
 
 ```
-$ npm install -g commitizen
-
-$ commitizen init cz-conventional-changelog --save-dev --save-exact
+$ git commit
 ```
